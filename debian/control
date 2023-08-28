@@ -1,19 +1,23 @@
-Source: upstream-name
+Source: pkg-supergfxctl-plasmoid
 Section: admin
 Priority: optional
-Maintainer: name <email>
-Standards-Version: 4.6.1
-Build-Depends: debhelper-compat (= 13)
-Rules-Requires-Root: no
+Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
+Build-Depends: debhelper (>= 10),
+               dh-translations,
+               build-essential,
+               cmake, 
+               extra-cmake-modules,
+               g++,
+               libkf5i18n-dev,
+               libkf5plasma-dev,
+               qtdeclarative5-dev
+Standards-Version: 4.1.1
 
-Package: pkgname1
+Package: plasma-supergfxctl
 Architecture: linux-any
-# Delete any of these lines if un-used
-Depends: ${misc:Depends}, depends
-Recommends: high priority optdepends
-Conflicts: conflicts
-Suggests: low priority optdepends
-Breaks: also conflicts!?
-Provides: provides
-#
-Description: pkgdesc
+Depends: hicolor-icon-theme,
+         kde-plasma-desktop,
+         ${misc:Depends},
+         ${shlibs:Depends},
+         supergfxctl
+Description: KDE Plasma plasmoid for supergfxctl.

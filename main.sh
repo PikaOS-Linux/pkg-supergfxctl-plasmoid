@@ -3,9 +3,9 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://gitlab.com/Jhyub/supergfxctl-plasmoid -b v1.3.0
+cp -rvf ./debian ./supergfxctl-plasmoid/
+cd ./supergfxctl-plasmoid/
 
 # Get build deps
 apt-get build-dep ./ -y
