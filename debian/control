@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
 Build-Depends: debhelper (>= 10),
-               debhelper-compat (= 13)
+               debhelper-compat (= 13),
                dh-translations,
                build-essential,
                cmake, 
